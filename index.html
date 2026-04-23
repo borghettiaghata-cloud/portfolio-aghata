@@ -17,15 +17,16 @@
 
     :root {
       --bg-primary: #0a0a0a;
-      --bg-secondary: #111111;
-      --bg-card: #1a1a1a;
+      --bg-secondary: #0e1117;
+      --bg-card: #141820;
       --text-primary: #f5f5f5;
-      --text-secondary: #a0a0a0;
-      --accent: #c9a84c;
-      --accent-light: #e0c76e;
-      --accent-dark: #a68a30;
-      --border: #2a2a2a;
-      --gradient-accent: linear-gradient(135deg, #c9a84c, #e0c76e);
+      --text-secondary: #a0aab8;
+      --accent: #4a9db5;
+      --accent-light: #7b6bb5;
+      --accent-dark: #3a7d92;
+      --border: #1e2530;
+      --gradient-accent: linear-gradient(135deg, #2d7a8a, #6b4fa0);
+      --gradient-accent-soft: linear-gradient(135deg, rgba(45,122,138,0.15), rgba(107,79,160,0.15));
     }
 
     html {
@@ -142,7 +143,7 @@
       right: -30%;
       width: 800px;
       height: 800px;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(45, 122, 138, 0.08) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -205,7 +206,7 @@
 
     .hero-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 10px 40px rgba(45, 122, 138, 0.3);
     }
 
     .hero-cta svg {
@@ -418,7 +419,7 @@
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: rgba(201, 168, 76, 0.1);
+      background: rgba(45, 122, 138, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -475,7 +476,7 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--accent);
-      background: rgba(201, 168, 76, 0.1);
+      background: rgba(45, 122, 138, 0.12);
       padding: 0.35rem 0.85rem;
       border-radius: 50px;
       margin-bottom: 1rem;
@@ -542,44 +543,155 @@
       }
     }
 
-    /* AWARD */
-    .award-banner {
-      background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(201, 168, 76, 0.05));
-      border: 1px solid rgba(201, 168, 76, 0.3);
+    /* AWARD HIGHLIGHT */
+    .award-highlight {
+      background: linear-gradient(135deg, rgba(45, 122, 138, 0.12), rgba(107, 79, 160, 0.12));
+      border: 1px solid rgba(107, 79, 160, 0.3);
       border-radius: 20px;
       padding: 3rem;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
       max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .award-icon {
-      flex-shrink: 0;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: var(--gradient-accent);
-      display: flex;
+      margin: 0 auto 3rem;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 2.5rem;
       align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .award-content h3 {
+    .award-highlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-accent);
+    }
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      background: rgba(107, 79, 160, 0.2);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+
+    .award-highlight h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
     }
 
-    .award-content h3 span {
-      color: var(--accent);
+    .award-highlight h3 span {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .award-content p {
+    .award-highlight p {
       color: var(--text-secondary);
       font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .award-video-wrapper {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(107, 79, 160, 0.3);
+      aspect-ratio: 9/16;
+    }
+
+    .award-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CASE WITH VIDEO */
+    .case-card-featured {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.3s, transform 0.3s;
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .case-card-featured:hover {
+      border-color: var(--accent-dark);
+      transform: translateY(-4px);
+    }
+
+    .case-card-featured .case-video-single {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      aspect-ratio: 9/16;
+      transition: border-color 0.3s;
+    }
+
+    .case-card-featured .case-video-single:hover {
+      border-color: var(--accent);
+    }
+
+    .case-card-featured .case-video-single video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 0.75rem;
+      transition: gap 0.3s;
+    }
+
+    .case-link:hover {
+      gap: 0.7rem;
+    }
+
+    .case-link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .award-highlight {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        text-align: center;
+      }
+      .award-highlight .award-badge { margin: 0 auto 1rem; }
+      .award-video-wrapper { max-width: 180px; margin: 0 auto; }
+      .case-card-featured {
+        grid-template-columns: 1fr;
+      }
+      .case-card-featured .case-video-single {
+        max-width: 160px;
+        margin: 0 auto;
+      }
     }
 
     /* SKILLS / TOOLS */
@@ -681,7 +793,7 @@
       transform: translate(-50%, -50%);
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(45, 122, 138, 0.08) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -727,7 +839,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 10px 40px rgba(45, 122, 138, 0.3);
     }
 
     .btn-outline {
@@ -990,23 +1102,63 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
+  <!-- HISTÓRIAS DE SUCESSO — TIKTOK FOR BUSINESS -->
   <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">Histórias de Sucesso</span>
-        <h2 class="section-title">Projetos em destaque</h2>
+        <h2 class="section-title">TikTok For Business</h2>
       </div>
+
+      <!-- DESTAQUE: PREMIAÇÃO -->
+      <div class="award-highlight fade-up">
+        <div>
+          <span class="award-badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Bronze &mdash; TikTok Ad Awards México 2026
+          </span>
+          <h3>Avatar App Soriana &mdash; <span>Born to Perform</span></h3>
+          <p>Como Head de Copy, geri o projeto TTCX para a marca Soriana (Avatar App Soriana) que ganhou bronze na categoria Born to Perform (Melhor campanha de performance) no TikTok Ad Awards México 2026.</p>
+        </div>
+        <div class="award-video-wrapper">
+          <video src="tiktok-awards.mp4" muted loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+
+      <!-- CASES TIKTOK -->
       <div class="portfolio-grid">
+        <div class="case-card-featured fade-up">
+          <div>
+            <span class="case-tag">TikTok For Business</span>
+            <h3>Magazine Luiza &mdash; Offline Conversion Lift</h3>
+            <p>O TikTok comprova impacto incremental até nas conversões offline. Campanha que impulsionou resultados tangíveis para o varejo da Magalu, integrando estratégias digitais e presenciais.</p>
+            <a href="https://ads.tiktok.com/business/pt-BR/inspiration/magazine-luiza-offline-conversion-lift" target="_blank" class="case-link">
+              Ver case no TikTok
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="case-video-single">
+            <video src="magalu.mp4" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+        <div class="case-card-featured fade-up">
+          <div>
+            <span class="case-tag">TikTok For Business</span>
+            <h3>Santa Massa &mdash; TTCX</h3>
+            <p>A marca transformou sua presença digital e aumentou o reconhecimento ao investir no TikTok, fortalecendo sua posição no mercado através de estratégias de conteúdo direcionadas.</p>
+            <a href="https://ads.tiktok.com/business/pt-BR/inspiration/santa-massa-ttcx" target="_blank" class="case-link">
+              Ver case no TikTok
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="case-video-single">
+            <video src="santamassa.mp4" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
         <div class="case-card fade-up">
           <span class="case-tag">TikTok For Business</span>
           <h3>Branded Missions & Branded Effects</h3>
           <p>Criação de +400 criativos para campanhas TTCX, incluindo roteiros para Ads, hooks e copies com foco em performance e engajamento na plataforma.</p>
-        </div>
-        <div class="case-card fade-up">
-          <span class="case-tag">Premiado</span>
-          <h3>Avatar App Soriana &mdash; TikTok Ad Awards</h3>
-          <p>Gestão como Head de Copy do projeto TTCX para a marca Soriana, premiado com bronze na categoria Born to Perform (Melhor campanha de performance) no TikTok Ad Awards México.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Ativação</span>
@@ -1023,6 +1175,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS EM DESTAQUE -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Portfólio</span>
+        <h2 class="section-title">Projetos em Destaque</h2>
+      </div>
+      <div class="portfolio-grid">
         <div class="case-card fade-up">
           <span class="case-tag">Campanha</span>
           <h3>Bradesco no Lollapalooza BR</h3>
@@ -1194,8 +1358,9 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // Play/pause videos on hover
-    document.querySelectorAll('.case-video-wrapper').forEach(wrapper => {
+    // Play/pause videos on hover (desktop)
+    const allVideoWrappers = document.querySelectorAll('.case-video-wrapper, .case-video-single, .award-video-wrapper');
+    allVideoWrappers.forEach(wrapper => {
       const video = wrapper.querySelector('video');
       wrapper.addEventListener('mouseenter', () => video.play());
       wrapper.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
@@ -1211,7 +1376,7 @@
     }, { threshold: 0.5 });
 
     if ('ontouchstart' in window) {
-      document.querySelectorAll('.case-video-wrapper').forEach(el => videoObserver.observe(el));
+      allVideoWrappers.forEach(el => videoObserver.observe(el));
     }
   </script>
 </body>
