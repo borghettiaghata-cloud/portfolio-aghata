@@ -638,26 +638,9 @@
       line-height: 1.6;
     }
 
-    /* CASE WITH VIDEO SIDE BY SIDE */
-    .case-with-video {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      transition: border-color 0.3s, transform 0.3s;
-      display: grid;
-      grid-template-columns: 1fr 110px;
-      gap: 1.25rem;
-      align-items: start;
-    }
-
-    .case-with-video:hover {
-      border-color: var(--accent-dark);
-      transform: translateY(-4px);
-    }
-
-    .case-with-video .video-container {
-      max-height: 200px;
+    /* SINGLE VIDEO below text */
+    .case-video-single {
+      margin-top: 1.25rem;
     }
 
     @media (max-width: 900px) {
@@ -673,8 +656,7 @@
       }
       .award-badge { margin: 0 auto 0.75rem; }
       .award-highlight .video-container { max-width: 140px; margin: 0 auto; }
-      .case-with-video { grid-template-columns: 1fr; }
-      .case-with-video .video-container { max-width: 130px; margin: 0 auto; }
+      .case-video-single .video-container { max-width: 100%; }
       .case-video-grid { gap: 0.5rem; }
     }
 
@@ -1117,60 +1099,30 @@
       <div class="portfolio-grid">
 
         <!-- Magalu -->
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Varejo</span>
-            <h3>Magazine Luiza &mdash; Offline Conversion Lift</h3>
-            <p>O TikTok comprova impacto incremental até nas conversões offline. Campanha que impulsionou resultados tangíveis integrando estratégias digitais e presenciais.</p>
-            <a href="https://ads.tiktok.com/business/pt-BR/inspiration/magazine-luiza-offline-conversion-lift" target="_blank" class="case-link">
-              Ver case no TikTok
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="video-container">
-            <video src="magalu.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-sound-btn" aria-label="Ativar som">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-            </button>
-          </div>
+        <div class="case-card fade-up">
+          <span class="case-tag">Varejo</span>
+          <h3>Magazine Luiza &mdash; Offline Conversion Lift</h3>
+          <p>O TikTok comprova impacto incremental até nas conversões offline. Campanha que impulsionou resultados tangíveis integrando estratégias digitais e presenciais.</p>
+          <a href="https://ads.tiktok.com/business/pt-BR/inspiration/magazine-luiza-offline-conversion-lift" target="_blank" class="case-link">Ver case no TikTok <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <div class="case-video-single"><div class="video-container"><video src="magalu.mp4" muted loop playsinline preload="metadata"></video><button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button></div></div>
         </div>
 
         <!-- Santa Massa -->
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Alimentos</span>
-            <h3>Santa Massa &mdash; TTCX</h3>
-            <p>A marca transformou sua presença digital e aumentou o reconhecimento investindo no TikTok, fortalecendo sua posição no mercado com conteúdo direcionado.</p>
-            <a href="https://ads.tiktok.com/business/pt-BR/inspiration/santa-massa-ttcx" target="_blank" class="case-link">
-              Ver case no TikTok
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="video-container">
-            <video src="santamassa.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-sound-btn" aria-label="Ativar som">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-            </button>
-          </div>
+        <div class="case-card fade-up">
+          <span class="case-tag">Alimentos</span>
+          <h3>Santa Massa &mdash; TTCX</h3>
+          <p>A marca transformou sua presença digital e aumentou o reconhecimento investindo no TikTok, fortalecendo sua posição no mercado com conteúdo direcionado.</p>
+          <a href="https://ads.tiktok.com/business/pt-BR/inspiration/santa-massa-ttcx" target="_blank" class="case-link">Ver case no TikTok <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <div class="case-video-single"><div class="video-container"><video src="santamassa.mp4" muted loop playsinline preload="metadata"></video><button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button></div></div>
         </div>
 
         <!-- Vivo -->
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Telecom</span>
-            <h3>Vivo &mdash; Creative Exchange</h3>
-            <p>Abordagem TikTok first para a Vivo, otimizando resultados com o Creative Exchange. Estratégia voltada para conversões que demonstra o poder do ecossistema TikTok para o segmento telecom.</p>
-            <a href="https://ads.tiktok.com/business/pt-BR/inspiration/vivo-creative-exchange-mais-conversoes" target="_blank" class="case-link">
-              Ver case no TikTok
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="video-container">
-            <video src="vivo.mp4" muted loop playsinline preload="metadata"></video>
-            <button class="video-sound-btn" aria-label="Ativar som">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-            </button>
-          </div>
+        <div class="case-card fade-up">
+          <span class="case-tag">Telecom</span>
+          <h3>Vivo &mdash; Creative Exchange</h3>
+          <p>Abordagem TikTok first para a Vivo, otimizando resultados com o Creative Exchange. Estratégia voltada para conversões no segmento telecom.</p>
+          <a href="https://ads.tiktok.com/business/pt-BR/inspiration/vivo-creative-exchange-mais-conversoes" target="_blank" class="case-link">Ver case no TikTok <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <div class="case-video-single"><div class="video-container"><video src="vivo.mp4" muted loop playsinline preload="metadata"></video><button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button></div></div>
         </div>
 
       </div>
@@ -1206,126 +1158,104 @@
             </div>
           </div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Branded Mission</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Branded Mission</span>
             <h3>Hering &mdash; Mãe, nosso maior ícone</h3>
             <p>Branded Mission + Branded Effect para a Hering, celebrando as mães como ícones. Copies e roteiros criativos com foco em engajamento e conexão emocional.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="hering.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Campanha</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Campanha</span>
             <h3>Bradesco no Lollapalooza BR</h3>
             <p>Desenvolvimento de copies e roteiros criativos para a presença do Bradesco no Lollapalooza Brasil, com foco em engajamento e awareness.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="bradesco.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Campanha</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Campanha</span>
             <h3>Fanta + Pringles &mdash; Remix</h3>
             <p>Juntos, Fanta e Pringles incentivam os adolescentes a deixar o sabor guiar suas escolhas. Copies criativas com linguagem jovem e nativa da plataforma.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="fanta.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Marca de Luxo</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Marca de Luxo</span>
             <h3>Carolina Herrera &mdash; Beauty Lovers</h3>
             <p>Produção de conteúdo para campanha Herrera Beauty Lovers, com copies que equilibram sofisticação e performance em formatos digitais.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="herrera.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Varejo</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Varejo</span>
             <h3>Mercado Livre &mdash; Descontaço</h3>
             <p>Copies com gatilhos de urgência e escassez para a campanha Descontaço do Mercado Livre, focando em conversão direta.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="mercadolivre.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Entretenimento</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Entretenimento</span>
             <h3>Imaculada Diamond Films</h3>
             <p>Campanha promocional com storytelling e CTA estratégico para lançamento no segmento de entretenimento.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="imaculada.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Hot Sale</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Hot Sale</span>
             <h3>Hot Sale México & Hot Wheels</h3>
             <p>Campanhas de Hot Sale para o mercado mexicano e Dia de Regalar Hot Wheels, com copies adaptadas culturalmente em espanhol.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="hotsale.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Branded Mission</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Branded Mission</span>
             <h3>Will Bank &mdash; Seu São João pode ser mais Will</h3>
             <p>Branded Mission para o Will Bank no São João, com copies e roteiros criativos celebrando a festa junina com a identidade da marca.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="willbank.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Branded Mission</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Branded Mission</span>
             <h3>Mercado Pago &mdash; #Top5doFimDeAno</h3>
             <p>Branded Mission de Fim de Ano para o Mercado Pago. Vídeo Hero com copies focadas em engajamento e conversão para a campanha #Top5doFimDeAno.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="mercadopago.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Top View</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Top View</span>
             <h3>Magalu &mdash; Agora ou Nunca Black das Blacks</h3>
             <p>Top View para a Magalu na Black das Blacks. Copies com urgência e escassez para máxima conversão no formato premium do TikTok.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="magalu-bb.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
-        <div class="case-with-video fade-up">
-          <div>
-            <span class="case-tag">Promoção</span>
+        <div class="case-card fade-up">
+          <span class="case-tag">Promoção</span>
             <h3>Ipiranga &mdash; Promoção Rock in Rio</h3>
             <p>Campanha promocional Ipiranga para o Rock in Rio, com roteiros e copies estratégicas integrando o universo do festival à marca.</p>
-          </div>
-          <div class="video-container">
+          <div class="case-video-single"><div class="video-container">
             <video src="ipiranga.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>
