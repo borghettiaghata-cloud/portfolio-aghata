@@ -643,17 +643,21 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 2rem;
+      padding: 1.75rem;
       transition: border-color 0.3s, transform 0.3s;
       display: grid;
-      grid-template-columns: 1fr 130px;
-      gap: 1.5rem;
-      align-items: center;
+      grid-template-columns: 1fr 110px;
+      gap: 1.25rem;
+      align-items: start;
     }
 
     .case-with-video:hover {
       border-color: var(--accent-dark);
       transform: translateY(-4px);
+    }
+
+    .case-with-video .video-container {
+      max-height: 200px;
     }
 
     @media (max-width: 900px) {
@@ -1202,10 +1206,16 @@
             </div>
           </div>
         </div>
-        <div class="case-card fade-up">
-          <span class="case-tag">TTCX</span>
-          <h3>Branded Missions & Branded Effects</h3>
-          <p>Criação de +400 criativos para campanhas TTCX, incluindo roteiros para Ads, hooks e copies com foco em performance e engajamento na plataforma.</p>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Branded Mission</span>
+            <h3>Hering &mdash; Mãe, nosso maior ícone</h3>
+            <p>Branded Mission + Branded Effect para a Hering, celebrando as mães como ícones. Copies e roteiros criativos com foco em engajamento e conexão emocional.</p>
+          </div>
+          <div class="video-container">
+            <video src="hering.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
         </div>
         <div class="case-with-video fade-up">
           <div>
@@ -1251,10 +1261,16 @@
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
           </div>
         </div>
-        <div class="case-card fade-up">
-          <span class="case-tag">Entretenimento</span>
-          <h3>Rock in Rio & Imaculada Diamond Films</h3>
-          <p>Campanhas promocionais com storytelling e CTA estratégico para eventos e lançamentos no segmento de entretenimento.</p>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Entretenimento</span>
+            <h3>Imaculada Diamond Films</h3>
+            <p>Campanha promocional com storytelling e CTA estratégico para lançamento no segmento de entretenimento.</p>
+          </div>
+          <div class="video-container">
+            <video src="imaculada.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
         </div>
         <div class="case-with-video fade-up">
           <div>
@@ -1264,6 +1280,50 @@
           </div>
           <div class="video-container">
             <video src="hotsale.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
+        </div>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Branded Mission</span>
+            <h3>Will Bank &mdash; Seu São João pode ser mais Will</h3>
+            <p>Branded Mission para o Will Bank no São João, com copies e roteiros criativos celebrando a festa junina com a identidade da marca.</p>
+          </div>
+          <div class="video-container">
+            <video src="willbank.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
+        </div>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Branded Mission</span>
+            <h3>Mercado Pago &mdash; #Top5doFimDeAno</h3>
+            <p>Branded Mission de Fim de Ano para o Mercado Pago. Vídeo Hero com copies focadas em engajamento e conversão para a campanha #Top5doFimDeAno.</p>
+          </div>
+          <div class="video-container">
+            <video src="mercadopago.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
+        </div>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Top View</span>
+            <h3>Magalu &mdash; Agora ou Nunca Black das Blacks</h3>
+            <p>Top View para a Magalu na Black das Blacks. Copies com urgência e escassez para máxima conversão no formato premium do TikTok.</p>
+          </div>
+          <div class="video-container">
+            <video src="magalu-bb.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          </div>
+        </div>
+        <div class="case-with-video fade-up">
+          <div>
+            <span class="case-tag">Promoção</span>
+            <h3>Ipiranga &mdash; Promoção Rock in Rio</h3>
+            <p>Campanha promocional Ipiranga para o Rock in Rio, com roteiros e copies estratégicas integrando o universo do festival à marca.</p>
+          </div>
+          <div class="video-container">
+            <video src="ipiranga.mp4" muted loop playsinline preload="metadata"></video>
             <button class="video-sound-btn" aria-label="Ativar som"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
           </div>
         </div>
