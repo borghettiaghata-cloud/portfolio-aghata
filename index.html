@@ -495,6 +495,53 @@
       flex: 1;
     }
 
+    .case-videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .case-video-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: border-color 0.3s;
+      aspect-ratio: 9/16;
+    }
+
+    .case-video-wrapper:hover {
+      border-color: var(--accent);
+    }
+
+    .case-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .case-video-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.5rem 0.75rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .case-videos {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+    }
+
     /* AWARD */
     .award-banner {
       background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(201, 168, 76, 0.05));
@@ -817,9 +864,9 @@
     <a href="#" class="nav-logo">Aghata Borghetti</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servicos">Servicos</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -832,10 +879,10 @@
     <div class="hero-content fade-up">
       <span class="hero-tag">Head of Copy &bull; Copywriter &bull; Redatora</span>
       <h1 class="hero-title">
-        Potencializando a <span class="highlight">performance criativa</span> do seu negocio
+        Potencializando a <span class="highlight">performance criativa</span> do seu negócio
       </h1>
       <p class="hero-subtitle">
-        Estrategia de conteudo orientada a resultados. CTR, conversao, engajamento e vendas &mdash; com tecnicas de copywriting que transformam palavras em performance.
+        Estratégia de conteúdo orientada a resultados. CTR, conversão, engajamento e vendas &mdash; com técnicas de copywriting que transformam palavras em performance.
       </p>
       <a href="https://wa.me/5511947524213" target="_blank" class="hero-cta">
         Bora bater um papo
@@ -854,11 +901,11 @@
       <div class="about-grid">
         <div class="about-text fade-up">
           <span class="section-label">Sobre mim</span>
-          <h2 class="section-title" style="text-align:left; margin-bottom: 1.5rem;">De Bibliotecaria a <span style="color:var(--accent)">Copywriter</span></h2>
-          <p>Sou Bibliotecaria de formacao e <strong>Copywriter por vocacao</strong>. Em 2022, apos me mudar para Buenos Aires, descobri uma nova paixao e abracei um novo comeco: a escrita criativa.</p>
-          <p>Decidi atuar em um novo mundo, unindo o que eu amo: <strong>informacao, pesquisa, indexacao</strong> e, claro, <strong>escrita e criatividade</strong>.</p>
-          <p>Todo mundo acha que escrever e facil... Colocar as virgulas nos lugares certos com inicio, meio e fim. Certo? <strong>Nao!</strong> Tem que convencer alguem do outro lado, e muitas vezes voce so tem 2 linhas.</p>
-          <p>Nao seria legal ter alguem que deixasse esse caminho mais facil? <strong>Ca estou eu!</strong></p>
+          <h2 class="section-title" style="text-align:left; margin-bottom: 1.5rem;">De Bibliotecária a <span style="color:var(--accent)">Copywriter</span></h2>
+          <p>Sou Bibliotecária de formação e <strong>Copywriter por vocação</strong>. Em 2022, após me mudar para Buenos Aires, descobri uma nova paixão e abracei um novo começo: a escrita criativa.</p>
+          <p>Decidi atuar em um novo mundo, unindo o que eu amo: <strong>informação, pesquisa, indexação</strong> e, claro, <strong>escrita e criatividade</strong>.</p>
+          <p>Todo mundo acha que escrever é fácil... Colocar as vírgulas nos lugares certos com início, meio e fim. Certo? <strong>Não!</strong> Tem que convencer alguém do outro lado, e muitas vezes você só tem 2 linhas.</p>
+          <p>Não seria legal ter alguém que deixasse esse caminho mais fácil? <strong>Cá estou eu!</strong></p>
         </div>
         <div class="fade-up">
           <div class="about-photo">
@@ -875,13 +922,13 @@
           </div>
           <div class="stat-card">
             <div class="stat-number">PT/ES</div>
-            <div class="stat-label">Traducoes bilingues</div>
+            <div class="stat-label">Traduções bilíngues</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">
               <svg style="width:40px;height:40px" viewBox="0 0 24 24" fill="var(--accent)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
             </div>
-            <div class="stat-label">Bronze - TikTok Ad Awards Mexico</div>
+            <div class="stat-label">Bronze - TikTok Ad Awards México</div>
           </div>
           </div>
         </div>
@@ -893,8 +940,8 @@
   <section id="servicos">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">O que eu faco</span>
-        <h2 class="section-title">Servicos especializados</h2>
+        <span class="section-label">O que eu faço</span>
+        <h2 class="section-title">Serviços especializados</h2>
       </div>
       <div class="services-grid">
         <div class="service-card fade-up">
@@ -909,35 +956,35 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
           <h3>Artigos de Blog & SEO</h3>
-          <p>Criacao e otimizacao de artigos com tecnicas de SEO e SEM via WordPress. Artigos com +1000 palavras, respeitando legibilidade e ranqueamento.</p>
+          <p>Criação e otimização de artigos com técnicas de SEO e SEM via WordPress. Artigos com +1000 palavras, respeitando legibilidade e ranqueamento.</p>
         </div>
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h3>Storytelling Estrategico</h3>
-          <p>Narrativas que conectam marca e audiencia utilizando AIDA, gatilhos mentais, hooks e tecnicas de persuasao comprovadas.</p>
+          <h3>Storytelling Estratégico</h3>
+          <p>Narrativas que conectam marca e audiência utilizando AIDA, gatilhos mentais, hooks e técnicas de persuasão comprovadas.</p>
         </div>
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <h3>Redes Sociais & Copy</h3>
-          <p>Gestao de calendario editorial, producao de copies para redes sociais em diversos formatos e criativos para Meta Ads.</p>
+          <p>Gestão de calendário editorial, produção de copies para redes sociais em diversos formatos e criativos para Meta Ads.</p>
         </div>
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <h3>E-mail Marketing</h3>
-          <p>Producao de copies para e-mail marketing, newsletters e fluxos de automacao com foco em conversao e engajamento.</p>
+          <p>Produção de copies para e-mail marketing, newsletters e fluxos de automação com foco em conversão e engajamento.</p>
         </div>
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-          <h3>Traducoes PT/ES</h3>
-          <p>Traducoes e adaptacoes criativas entre portugues e espanhol, mantendo tom de voz e impacto da mensagem original.</p>
+          <h3>Traduções PT/ES</h3>
+          <p>Traduções e adaptações criativas entre português e espanhol, mantendo tom de voz e impacto da mensagem original.</p>
         </div>
       </div>
     </div>
@@ -947,29 +994,39 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">Historias de Sucesso</span>
+        <span class="section-label">Histórias de Sucesso</span>
         <h2 class="section-title">Projetos em destaque</h2>
       </div>
       <div class="portfolio-grid">
         <div class="case-card fade-up">
           <span class="case-tag">TikTok For Business</span>
           <h3>Branded Missions & Branded Effects</h3>
-          <p>Criacao de +400 criativos para campanhas TTCX, incluindo roteiros para Ads, hooks e copies com foco em performance e engajamento na plataforma.</p>
+          <p>Criação de +400 criativos para campanhas TTCX, incluindo roteiros para Ads, hooks e copies com foco em performance e engajamento na plataforma.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Premiado</span>
           <h3>Avatar App Soriana &mdash; TikTok Ad Awards</h3>
-          <p>Gestao como Head de Copy do projeto TTCX para a marca Soriana, premiado com bronze na categoria Born to Perform (Melhor campanha de performance) no TikTok Ad Awards Mexico.</p>
+          <p>Gestão como Head de Copy do projeto TTCX para a marca Soriana, premiado com bronze na categoria Born to Perform (Melhor campanha de performance) no TikTok Ad Awards México.</p>
         </div>
         <div class="case-card fade-up">
-          <span class="case-tag">Ativacao</span>
+          <span class="case-tag">Ativação</span>
           <h3>KitKat Cereal + TikTok + Cinemark</h3>
-          <p>Break digno de cinema! Ativacao criativa KitKat Cereal integrando TikTok e Cinemark com roteiros e copies de alta conversao.</p>
+          <p>Break digno de cinema! Ativação criativa KitKat Cereal integrando TikTok e Cinemark com roteiros e copies de alta conversão.</p>
+          <div class="case-videos">
+            <div class="case-video-wrapper">
+              <video src="kitkat-leticia.mp4" muted loop playsinline preload="metadata"></video>
+              <span class="case-video-label">Letícia Pedro</span>
+            </div>
+            <div class="case-video-wrapper">
+              <video src="kitkat-fabio.mp4" muted loop playsinline preload="metadata"></video>
+              <span class="case-video-label">Fábio Maciel</span>
+            </div>
+          </div>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Campanha</span>
           <h3>Bradesco no Lollapalooza BR</h3>
-          <p>Desenvolvimento de copies e roteiros criativos para a presenca do Bradesco no Lollapalooza Brasil, com foco em engajamento e awareness.</p>
+          <p>Desenvolvimento de copies e roteiros criativos para a presença do Bradesco no Lollapalooza Brasil, com foco em engajamento e awareness.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Campanha</span>
@@ -979,21 +1036,21 @@
         <div class="case-card fade-up">
           <span class="case-tag">Marca de Luxo</span>
           <h3>Carolina Herrera &mdash; Beauty Lovers</h3>
-          <p>Producao de conteudo para campanha Herrera Beauty Lovers, com copies que equilibram sofisticacao e performance em formatos digitais.</p>
+          <p>Produção de conteúdo para campanha Herrera Beauty Lovers, com copies que equilibram sofisticação e performance em formatos digitais.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Varejo</span>
-          <h3>Mercado Livre &mdash; Descontaco</h3>
-          <p>Copies com gatilhos de urgencia e escassez para a campanha Descontaco do Mercado Livre, focando em conversao direta.</p>
+          <h3>Mercado Livre &mdash; Descontaço</h3>
+          <p>Copies com gatilhos de urgência e escassez para a campanha Descontaço do Mercado Livre, focando em conversão direta.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Entretenimento</span>
           <h3>Rock in Rio & Imaculada Diamond Films</h3>
-          <p>Campanhas promocionais com storytelling e CTA estrategico para eventos e lancamentos no segmento de entretenimento.</p>
+          <p>Campanhas promocionais com storytelling e CTA estratégico para eventos e lançamentos no segmento de entretenimento.</p>
         </div>
         <div class="case-card fade-up">
           <span class="case-tag">Hot Sale</span>
-          <h3>Hot Sale Mexico & Hot Wheels</h3>
+          <h3>Hot Sale México & Hot Wheels</h3>
           <p>Campanhas de Hot Sale para o mercado mexicano e Dia de Regalar Hot Wheels, com copies adaptadas culturalmente em espanhol.</p>
         </div>
       </div>
@@ -1004,24 +1061,24 @@
   <section class="experience" id="experiencia">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">Trajetoria</span>
-        <h2 class="section-title">Experiencia profissional</h2>
+        <span class="section-label">Trajetória</span>
+        <h2 class="section-title">Experiência profissional</h2>
       </div>
       <div class="timeline fade-up">
         <div class="timeline-item">
           <h3>TikTok For Business</h3>
           <div class="role">Head of Copy</div>
-          <p>Definicao de estrategias de conteudo por meio de ideations alinhados aos objetivos de negocio e briefing dos clientes. Lideranca estrategica e atuacao hands-on em roteiros para Ads (TikTok e Meta Ads). Gestao de +400 criativos para TTCX.</p>
+          <p>Definição de estratégias de conteúdo por meio de ideations alinhados aos objetivos de negócio e briefing dos clientes. Liderança estratégica e atuação hands-on em roteiros para Ads (TikTok e Meta Ads). Gestão de +400 criativos para TTCX.</p>
         </div>
         <div class="timeline-item">
-          <h3>Gestao de Redes Sociais</h3>
+          <h3>Gestão de Redes Sociais</h3>
           <div class="role">Copywriter & Social Media</div>
-          <p>Gerenciamento de calendario editorial, producao de copies para redes sociais em diversos formatos e criativos para Meta Ads. Gestao de marca pessoal para Carla Netto, com foco em orientacao profissional de carreira.</p>
+          <p>Gerenciamento de calendário editorial, produção de copies para redes sociais em diversos formatos e criativos para Meta Ads. Gestão de marca pessoal para Carla Netto, com foco em orientação profissional de carreira.</p>
         </div>
         <div class="timeline-item">
           <h3>Blog & SEO</h3>
           <div class="role">Redatora SEO</div>
-          <p>Criacao e otimizacao de artigos de blog com tecnicas de SEO e SEM via WordPress (CMS). Artigos com +1000 palavras, utilizando ferramentas como SEMrush, Google Keyword Planner, Google Search Console e AnswerThePublic.</p>
+          <p>Criação e otimização de artigos de blog com técnicas de SEO e SEM via WordPress (CMS). Artigos com +1000 palavras, utilizando ferramentas como SEMrush, Google Keyword Planner, Google Search Console e AnswerThePublic.</p>
         </div>
       </div>
     </div>
@@ -1031,7 +1088,7 @@
   <section id="ferramentas">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-label">Ferramentas & Tecnicas</span>
+        <span class="section-label">Ferramentas & Técnicas</span>
         <h2 class="section-title">Meu arsenal criativo</h2>
       </div>
       <div class="skills-wrapper fade-up">
@@ -1041,9 +1098,9 @@
         <span class="skill-pill">Hooks</span>
         <span class="skill-pill">Thumbstopping</span>
         <span class="skill-pill">SEO & SEM</span>
-        <span class="skill-pill">CTA Estrategico</span>
+        <span class="skill-pill">CTA Estratégico</span>
         <span class="skill-pill">Prova Social</span>
-        <span class="skill-pill">Urgencia & Escassez</span>
+        <span class="skill-pill">Urgência & Escassez</span>
         <span class="skill-pill">Autoridade</span>
         <span class="skill-pill">Dor vs. Prazer</span>
         <span class="skill-pill">Curiosidade</span>
@@ -1067,7 +1124,7 @@
       <div class="fade-up">
         <span class="section-label">Vamos conversar?</span>
         <h2 class="cta-title">Bora bater um <span style="color:var(--accent); font-style:italic;">papo!</span></h2>
-        <p class="cta-subtitle">Pronta para potencializar a performance criativa do seu negocio com copies que convertem.</p>
+        <p class="cta-subtitle">Pronta para potencializar a performance criativa do seu negócio com copies que convertem.</p>
         <div class="cta-buttons">
           <a href="https://wa.me/5511947524213" target="_blank" class="btn-primary">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1136,6 +1193,26 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Play/pause videos on hover
+    document.querySelectorAll('.case-video-wrapper').forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      wrapper.addEventListener('mouseenter', () => video.play());
+      wrapper.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    });
+
+    // Autoplay videos when visible on mobile (no hover)
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (entry.isIntersecting) { video.play(); }
+        else { video.pause(); video.currentTime = 0; }
+      });
+    }, { threshold: 0.5 });
+
+    if ('ontouchstart' in window) {
+      document.querySelectorAll('.case-video-wrapper').forEach(el => videoObserver.observe(el));
+    }
   </script>
 </body>
 </html>
