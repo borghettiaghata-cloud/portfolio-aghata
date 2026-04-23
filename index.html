@@ -933,9 +933,154 @@
         left: 0;
       }
     }
+    /* SPLASH SCREEN */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .splash.out {
+      animation: splashOut 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+      pointer-events: none;
+    }
+
+    @keyframes splashOut {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.05); }
+    }
+
+    .splash-line {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 2rem;
+      transform: scaleX(0);
+      animation: lineIn 0.6s 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes lineIn {
+      to { transform: scaleX(1); }
+    }
+
+    .splash-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-weight: 700;
+      color: #fffefd;
+      letter-spacing: 2px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid var(--accent);
+      width: 0;
+      animation: typewriter 1.4s 0.8s steps(18) forwards, cursorBlink 0.6s 0.8s step-end infinite;
+    }
+
+    @keyframes typewriter {
+      to { width: 100%; }
+    }
+
+    @keyframes cursorBlink {
+      50% { border-color: transparent; }
+    }
+
+    .splash-name.done {
+      border-color: transparent;
+      animation: typewriter 1.4s 0.8s steps(18) forwards;
+    }
+
+    .splash-role {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 1.25rem;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeSlideIn 0.6s 2.4s ease forwards;
+    }
+
+    .splash-enter {
+      position: absolute;
+      bottom: 3rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      opacity: 0;
+      animation: fadeSlideIn 0.5s 3s ease forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .splash-enter .arrow {
+      width: 1px;
+      height: 30px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeSlideIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .splash-dots {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .splash-dot {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: dotFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes dotFloat {
+      0% { opacity: 0; transform: translateY(0); }
+      20% { opacity: 0.3; }
+      80% { opacity: 0.1; }
+      100% { opacity: 0; transform: translateY(-100px); }
+    }
   </style>
 </head>
 <body>
+
+  <!-- SPLASH SCREEN -->
+  <div class="splash" id="splash">
+    <div class="splash-dots" id="splashDots"></div>
+    <div class="splash-line"></div>
+    <div class="splash-name" id="splashName">Aghata Borghetti</div>
+    <div class="splash-role">Copywriter Sênior</div>
+    <div class="splash-enter">
+      <span>Entrar</span>
+      <div class="arrow"></div>
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -1423,6 +1568,39 @@
   </footer>
 
   <script>
+    // Splash screen
+    const splash = document.getElementById('splash');
+    const splashDots = document.getElementById('splashDots');
+    const splashName = document.getElementById('splashName');
+
+    // Generate floating dots
+    for (let i = 0; i < 30; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'splash-dot';
+      dot.style.left = Math.random() * 100 + '%';
+      dot.style.top = (40 + Math.random() * 60) + '%';
+      dot.style.animationDelay = (Math.random() * 4) + 's';
+      dot.style.animationDuration = (3 + Math.random() * 3) + 's';
+      splashDots.appendChild(dot);
+    }
+
+    // Remove cursor after typing finishes
+    setTimeout(() => { splashName.classList.add('done'); }, 2400);
+
+    // Close splash on click or after 5s
+    function closeSplash() {
+      if (splash.classList.contains('out')) return;
+      splash.classList.add('out');
+      document.body.style.overflow = '';
+      setTimeout(() => splash.remove(), 800);
+    }
+
+    splash.addEventListener('click', closeSplash);
+    setTimeout(closeSplash, 5000);
+
+    // Prevent scroll while splash is visible
+    document.body.style.overflow = 'hidden';
+
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
