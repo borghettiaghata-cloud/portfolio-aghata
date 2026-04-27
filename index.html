@@ -377,6 +377,117 @@
       font-weight: 500;
     }
 
+    /* PROBLEMA - COMPARAÇÃO */
+    .problema {
+      background: var(--bg-primary);
+    }
+
+    .problema-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .problema-intro p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-top: 1rem;
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .compare-card {
+      border-radius: 16px;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .compare-card--generic {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+
+    .compare-card--strategic {
+      background: var(--bg-card);
+      border: 1px solid var(--accent-dark);
+    }
+
+    .compare-card--strategic::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-accent);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .compare-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .compare-card--generic h3 {
+      color: var(--text-secondary);
+    }
+
+    .compare-card--strategic h3 {
+      color: var(--accent);
+    }
+
+    .compare-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .compare-card ul li {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .compare-card--generic ul li {
+      color: var(--text-secondary);
+    }
+
+    .compare-card--strategic ul li {
+      color: var(--text-primary);
+    }
+
+    .compare-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
+
+    .compare-card--generic .compare-icon {
+      color: #6b5545;
+    }
+
+    .compare-card--strategic .compare-icon {
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .compare-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* SERVICES */
     .services-grid {
       display: grid;
@@ -1170,6 +1281,75 @@
     </div>
   </section>
 
+  <!-- PROBLEMA -->
+  <section class="problema" id="problema">
+    <div class="container">
+      <div class="problema-intro fade-up">
+        <span class="section-label">O problema</span>
+        <h2 class="section-title">Copy genérica vs. Copy estratégica</h2>
+        <p>Você sente que investe em ads, mas o retorno não acompanha? O problema pode estar nas palavras.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card compare-card--generic fade-up">
+          <h3>
+            <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Copy genérica
+          </h3>
+          <ul>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Textos que descrevem, mas não persuadem
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              CTR baixo e custo por aquisição alto
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Audiência não se conecta com a marca
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Investimento desperdiçado em ads
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Roteiros sem hook nem gatilhos mentais
+            </li>
+          </ul>
+        </div>
+        <div class="compare-card compare-card--strategic fade-up">
+          <h3>
+            <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Copy estratégica
+          </h3>
+          <ul>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Textos com AIDA, hooks e persuasão
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              CTR otimizado e conversão escalável
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Storytelling que gera conexão emocional
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ROI positivo com criativos data-driven
+            </li>
+            <li>
+              <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Roteiros com thumbstopping e trends
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICOS -->
   <section id="servicos">
     <div class="container">
@@ -1502,17 +1682,17 @@
         <div class="timeline-item">
           <h3>Freelancer</h3>
           <div class="role">Copywriter &mdash; Set/2023 &ndash; Atualmente</div>
-          <p>Produção de roteiros: Hooks, thumbstoppings, CTAs e textos para anúncios. Storytelling estratégico transformando mensagens técnicas em narrativas envolventes. Brainstorming e ideação de conceitos de campanhas, pesquisa de mercado e tendências. Traduções português/espanhol.</p>
+          <p>Produção de roteiros: Hooks, thumbstoppings, CTAs e textos para anúncios. Estruturação de falas, cenas e narrativas para vídeos curtos, comerciais, branded content, vídeos institucionais ou criadores de conteúdo. Storytelling estratégico: transformar mensagens técnicas ou comerciais em narrativas envolventes, adaptando o tom de voz da marca ao público-alvo. Brainstorming e ideação: participar ou conduzir sessões criativas para gerar conceitos e ideias de campanhas. Pesquisa e referências: estudar mercado, concorrência e tendências. Ajustes e revisões: adaptar textos com base em feedbacks da equipe de criação, cliente ou métricas de performance. Traduções: Português/espanhol &ndash; espanhol/português.</p>
         </div>
         <div class="timeline-item">
           <h3>Start University</h3>
           <div class="role">Analista de Conteúdo &mdash; Ago/2022 &ndash; Jul/2023</div>
-          <p>Redação de conteúdos acadêmicos e estratégia para blogs aplicada a SEO. Produção de +150 artigos otimizados para SEO. Comunicação escrita, redação criativa e redação de conteúdo para web. Traduções espanhol-português.</p>
+          <p>Trabalhei com redação de conteúdos acadêmicos, estratégia para blogs e motores de busca, aplicadas a SEO. Comunicação escrita, redação criativa, redação de conteúdo para web, resolução de problemas, traduções espanhol &ndash; português. Produção de +150 artigos otimizados para SEO.</p>
         </div>
         <div class="timeline-item">
           <h3>Fundação Salvador Arena</h3>
           <div class="role">Analista de Treinamento e Desenvolvimento &mdash; Nov/2020 &ndash; Mai/2022</div>
-          <p>Programa PDI (Plano de Desenvolvimento Individual), organização e liberação de cursos online. Manutenção e atualização de arquitetura da informação UI/UX do site da Universidade Corporativa. Automatização do programa Trilha do Conhecimento.</p>
+          <p>Responsável por treinamentos de tarefas especiais como NRs para suportar a necessidade da produção e segurança do trabalho. Responsável pelo programa PDI &ndash; Plano de Desenvolvimento Individual. Organização, manutenção e liberação de cursos online via chamados Octadesk e Udemy aos colaboradores. Manutenção e atualização de arquitetura de informação UI/UX do site da Universidade Corporativa Salvador Arena. Responsável pela manutenção e automatização do programa Trilha do Conhecimento, disponibilizando as ITs (Instruções de Trabalho) aos colaboradores.</p>
         </div>
       </div>
     </div>
